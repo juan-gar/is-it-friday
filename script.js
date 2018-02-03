@@ -12,7 +12,7 @@ console.log(weekDay)
 const node = document.createElement('h1')
 const textNodeYes = document.createTextNode('YES IT IS')
 const textNodeNo = document.createTextNode("NO IT'S NOT. START CRYING")
-const textNodeWk = document.createTextNode("No, but it's the weekend!")
+const textNodeWk = document.createTextNode("No, but it's the weekend! Enjoy!")
 
 //
 
