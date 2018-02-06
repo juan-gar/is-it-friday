@@ -26,7 +26,7 @@ function revealDay(){
   } else {
     node.appendChild(textNodeNo);
     document.getElementById("maindiv").appendChild(node)
-    mood = 'crying';
+    mood = 'sad';
   }
   
   
