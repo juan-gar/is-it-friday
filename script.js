@@ -8,10 +8,9 @@ const textNodeYes = document.createTextNode('YES IT IS')
 const textNodeNo = document.createTextNode("NO IT'S NOT. START CRYING")
 const textNodeWk = document.createTextNode("No, but it's the weekend! Enjoy!")
 
-const cry = 'crying'
-const friday = 'Friday'
 
 
+let mood;
 //
 
 
@@ -19,31 +18,29 @@ function revealDay(){
 
   if (day == 5){
     node.appendChild(textNodeYes);
-    document.getElementById("maindiv").appendChild(node)
-    
-  
+    document.getElementById("maindiv").appendChild(node);
+    mood = 'Friday';
+
   } else if (day == 6 || day == 7) {
     node.appendChild(textNodeWk);
-    document.getElementById("maindiv").appendChild(node)
+    document.getElementById("maindiv").appendChild(node);
   } else {
     node.appendChild(textNodeNo);
     document.getElementById("maindiv").appendChild(node)
+    mood = 'sad';
   }
-}
+  
+  
+  let gifRequest = "http://api.giphy.com/v1/gifs/random?tag=" + mood + "&api_key=EqVHhNTFouIPHY5r20T1y3UQZG5O854q&limit=1"
+  
 
-
-// AJAX request to pull gifs from Giphy API
-
-const cryingGifRequest = "http://api.giphy.com/v1/gifs/random?tag=crying&api_key=EqVHhNTFouIPHY5r20T1y3UQZG5O854q&limit=1"
-
-document.getElementById('submit').addEventListener('click', function(){
-   const request = new XMLHttpRequest;
+   const request = new XMLHttpRequest();
    
-   request.open('GET', cryingGifRequest, true)
+   request.open('GET', gifRequest, true)
    
    request.onload = function() {
      if (request.status >= 200 && request.status <400){
-       const data = JSON.parse(request.responseText).data.image_original_url
+       const data = JSON.parse(request.responseText).data.image_url
        console.log(data)
        document.getElementById('giphy').innerHTML = '<center><img src = "' +data+ '"  title="GIF via Giphy"></center>';
        } else {
@@ -58,4 +55,5 @@ document.getElementById('submit').addEventListener('click', function(){
   
   request.send()
   
-})
+  
+}
