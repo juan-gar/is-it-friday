@@ -9,7 +9,6 @@ const textNodeNo = document.createTextNode("NO IT'S NOT. START CRYING")
 const textNodeWk = document.createTextNode("No, but it's the weekend! Enjoy!")
 
 
-
 let mood;
 //
 
