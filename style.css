@@ -16,6 +16,6 @@ html {
 @media (max-width: 550px){
       img {
       width: 100%;
-      height: auto
+      height: 80%
       }
 }

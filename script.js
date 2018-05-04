@@ -70,7 +70,7 @@ function revealDay(){
   
   //2. ES6 Fetch
   
-  let gifRequest = `http://api.giphy.com/v1/gifs/random?tag=${mood}&api_key=EqVHhNTFouIPHY5r20T1y3UQZG5O854q&limit=1`
+  let gifRequest = `https://api.giphy.com/v1/gifs/random?tag=${mood}&api_key=EqVHhNTFouIPHY5r20T1y3UQZG5O854q&limit=1`
   
   fetch(gifRequest)
     .then((resp) => resp.json())
