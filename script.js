@@ -4,16 +4,17 @@ const day = now.getDay()
 
 const textArray = ["NO IT'S NOT. START CRYING","Almost... there...","YES IT IS","No, but it's the weekend!Enjoy!"]
 
+const createNode = (x) => document.createTextNode(textArray[x])
+
+
 const node = document.createElement('h1')
-const textNodeYes = document.createTextNode(textArray[2])
-const textNodeNo = document.createTextNode(textArray[0])
-const textNodeWk = document.createTextNode(textArray[3])
-const textNodeTh = document.createTextNode(textArray[1])
+const textNodeYes = createNode(2)
+const textNodeNo = createNode(0)
+const textNodeWk = createNode(3)
+const textNodeTh = createNode(1)
 
 
 let mood;
-
-//
 
 
 function revealDay(){
