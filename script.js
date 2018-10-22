@@ -28,7 +28,7 @@ function revealDay(){
   
   } else if (day == 4) {
     node.appendChild(textNodeTh);
-    mood = 'come on'
+    mood = 'hang in there'
     
   
   } else if (day == 1) {
