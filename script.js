@@ -2,7 +2,7 @@ const now = new Date();
 
 const day = now.getDay()
 
-const textArray = ["NO IT'S NOT. START CRYING","Almost... there...","YES IT IS","No, but it's the weekend!Enjoy!"]
+const textArray = ["NO IT'S NOT. START CRYING","Almost... there...","YES IT IS","No, but it's the weekend!Enjoy!","LOL"]
 
 const createNode = (x) => document.createTextNode(textArray[x])
 
@@ -12,6 +12,7 @@ const textNodeYes = createNode(2)
 const textNodeNo = createNode(0)
 const textNodeWk = createNode(3)
 const textNodeTh = createNode(1)
+const textNodeLOL = createNode(4)
 
 
 let mood;
@@ -30,7 +31,12 @@ function revealDay(){
     mood = 'come on'
     
   
-  } else if (day == 6 || day == 7) {
+  } else if (day == 1) {
+    node.appendChild(textNodeLOL);
+    mood = 'LOL'
+    
+  
+  }else if (day == 6 || day == 7) {
     node.appendChild(textNodeWk);
     mood = 'weekend'
     
