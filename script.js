@@ -1,6 +1,6 @@
 const now = new Date();
 
-const day = now.getDay()
+let day = now.getDay()
 
 const textArray = ["NO IT'S NOT. START CRYING","Almost... there...","YES IT IS","No, but it's the weekend!Enjoy!","LOL"]
 
@@ -36,7 +36,7 @@ function revealDay(){
     mood = 'LOL'
     
   
-  }else if (day == 6 || day == 7) {
+  }else if (day === 6 || day === 7) {
     node.appendChild(textNodeWk);
     mood = 'weekend'
     
